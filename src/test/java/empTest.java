@@ -67,6 +67,7 @@ public class empTest {
             assertEquals(expected, list.get(i).getSalary());
         }
     }
+
     @Test
     public void yearlyPayRaiseInvalidValue() {
         addToEmployeeListTest();
@@ -78,5 +79,21 @@ public class empTest {
         employeeListTestObj.yearlyPayRaise(101);
         assertEquals(salaryBeforeYearlyPayraise, list.get(0).getSalary());
 
+    }
+
+    @Test
+    public void individualPayRaiseTest() {
+        addToEmployeeListTest();
+        addToEmployeeListTest();
+        addToEmployeeListTest();
+
+        int index = 1;
+        
+        double temp = list.get(index).getSalary();
+        double percentRaise = 15.0;
+
+        employeeListTestObj.individualPayRaise(index, percentRaise);
+        double expected = ((temp / 100.0) * percentRaise) + temp;
+        assertEquals(expected, list.get(index).getSalary());
     }
 }
