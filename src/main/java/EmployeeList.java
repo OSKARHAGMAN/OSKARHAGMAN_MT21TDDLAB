@@ -19,6 +19,8 @@ public class EmployeeList {
     }
 
     public void changeEmployeeElementValues(String name, int age, double salary, int index) {
-
+        list.get(index).setName(name);
+        list.get(index).setAge(age);
+        list.get(index).setSalary(salary);
     }
 }
