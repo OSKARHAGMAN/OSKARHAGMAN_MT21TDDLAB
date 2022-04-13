@@ -37,7 +37,15 @@ public class empTest {
 
     @Test
     public void setNewValuesOnEmployeeOnSpecificIndexTest() {
+        addToEmployeeListTest();
+        addToEmployeeListTest();
+        addToEmployeeListTest();
 
+        employeeListTestObj.changeEmployeeElementValues("Rasputin", 47, 0, 1);
+        list = employeeListTestObj.getArrayList();
+        assertEquals("Rasputin", list.get(1).getName());
+        assertEquals(47, list.get(1).getAge());
+        assertEquals(0, list.get(1).getSalary());
     }
 
 }
