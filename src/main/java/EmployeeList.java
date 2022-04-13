@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class EmployeeList {
-    private ArrayList<Employee> list = new ArrayList<>();
+    private ArrayList<Employee> list;
 
     public EmployeeList(ArrayList list) {
         this.list = list;

@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -5,7 +6,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class empTest {
+public class EmployeeTest {
     private EmployeeList employeeListTestObj;
     private ArrayList<Employee> list = new ArrayList<>();
     double yearlyPercentRaise = 10.0;
@@ -96,15 +97,16 @@ public class empTest {
         double expected = ((temp / 100.0) * percentRaise) + temp;
         assertEquals(expected, list.get(index).getSalary());
     }
+
     @Test
-    public void individualPayRaiseTestInvalidValue(){
+    public void individualPayRaiseTestInvalidValue() {
         addToEmployeeListTest();
         double salaryBeforeIndividualPayraise = list.get(0).getSalary();
 
-        employeeListTestObj.individualPayRaise(0,-20);
+        employeeListTestObj.individualPayRaise(0, -20);
         assertEquals(salaryBeforeIndividualPayraise, list.get(0).getSalary());
 
-        employeeListTestObj.individualPayRaise(0,101);
+        employeeListTestObj.individualPayRaise(0, 101);
         assertEquals(salaryBeforeIndividualPayraise, list.get(0).getSalary());
     }
 }
