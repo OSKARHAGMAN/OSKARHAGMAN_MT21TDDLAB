@@ -23,4 +23,7 @@ public class EmployeeList {
         list.get(index).setAge(age);
         list.get(index).setSalary(salary);
     }
+    public void yearlyPayRaise(double percentage) {
+
+    }
 }

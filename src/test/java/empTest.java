@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class empTest {
     private EmployeeList employeeListTestObj;
     private ArrayList<Employee> list = new ArrayList<>();
+    double yearlyPercentRaise = 10.0;
 
 
     @BeforeEach
@@ -48,4 +49,24 @@ public class empTest {
         assertEquals(0, list.get(1).getSalary());
     }
 
+    @Test
+    public void yearlyPayRaiseTest() {
+        addToEmployeeListTest();
+        addToEmployeeListTest();
+        addToEmployeeListTest();
+        setNewValuesOnEmployeeOnSpecificIndexTest();
+
+        ArrayList<Double> tempSalaryList = new ArrayList<>();
+        for (Employee employee : list) {
+            tempSalaryList.add(employee.getSalary());
+        }
+        employeeListTestObj.yearlyPayRaise(yearlyPercentRaise);
+
+        for (int i = 0; i < list.size(); i++) {
+            double expected = ((tempSalaryList.get(i) / 100.0) * yearlyPercentRaise) + tempSalaryList.get(i);
+            assertEquals(expected, list.get(i).getSalary());
+        }
+
+
+    }
 }
