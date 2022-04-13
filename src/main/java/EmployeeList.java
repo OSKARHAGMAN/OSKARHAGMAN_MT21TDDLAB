@@ -11,7 +11,7 @@ public class EmployeeList {
     }
 
     public void addEmployee(String name, int age, double salary) {
-
+        list.add(new Employee(name, age, salary));
     }
 
     public void removeEmployee(int index) {

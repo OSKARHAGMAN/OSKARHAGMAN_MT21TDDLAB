@@ -12,7 +12,7 @@ public class Employee {
         this.employeeId = count++;
     }
     public int getEmployeeId() {
-        return 0;
+        return employeeId;
     }
 
     public String getName() {
