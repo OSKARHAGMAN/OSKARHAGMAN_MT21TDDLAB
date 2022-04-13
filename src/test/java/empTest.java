@@ -18,7 +18,7 @@ public class empTest {
     @Test
     public void addToEmployeeListTest() {
         employeeListTestObj.addEmployee("Oskar", 31, 11000);
-        list = employeeListTestObj.getArrayList();
+
         assertEquals(1, list.get(0).getEmployeeId());
         assertEquals("Oskar", list.get(0).getName());
         assertEquals(31, list.get(0).getAge());
@@ -42,7 +42,7 @@ public class empTest {
         addToEmployeeListTest();
 
         employeeListTestObj.changeEmployeeElementValues("Rasputin", 47, 0, 1);
-        list = employeeListTestObj.getArrayList();
+
         assertEquals("Rasputin", list.get(1).getName());
         assertEquals(47, list.get(1).getAge());
         assertEquals(0, list.get(1).getSalary());
