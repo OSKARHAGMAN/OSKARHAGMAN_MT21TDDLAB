@@ -15,7 +15,7 @@ public class EmployeeList {
     }
 
     public void removeEmployee(int index) {
-
+        list.remove(index);
     }
 
     public void changeEmployeeElementValues(String name, int age, double salary, int index) {
