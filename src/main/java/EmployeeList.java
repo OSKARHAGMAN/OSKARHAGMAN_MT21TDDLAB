@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class EmployeeList {
     private ArrayList<Employee> list = new ArrayList<>();
+
     public EmployeeList(ArrayList list) {
         this.list = list;
     }
@@ -23,7 +24,13 @@ public class EmployeeList {
         list.get(index).setAge(age);
         list.get(index).setSalary(salary);
     }
+
     public void yearlyPayRaise(double percentage) {
+            for (int i = 0; i < list.size(); i++) {
+                double newSalary = list.get(i).getSalary();
+                newSalary = (newSalary / 100.0) * percentage + newSalary;
+                list.get(i).setSalary(newSalary);
+            }
 
     }
 }

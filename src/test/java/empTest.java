@@ -49,6 +49,7 @@ public class empTest {
         assertEquals(0, list.get(1).getSalary());
     }
 
+
     @Test
     public void yearlyPayRaiseTest() {
         addToEmployeeListTest();
@@ -66,7 +67,5 @@ public class empTest {
             double expected = ((tempSalaryList.get(i) / 100.0) * yearlyPercentRaise) + tempSalaryList.get(i);
             assertEquals(expected, list.get(i).getSalary());
         }
-
-
     }
 }
