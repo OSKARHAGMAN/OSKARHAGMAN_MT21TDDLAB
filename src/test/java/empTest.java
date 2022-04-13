@@ -27,7 +27,11 @@ public class empTest {
 
     @Test
     public void clearDataOnIndexTest() {
-
+        addToEmployeeListTest();
+        addToEmployeeListTest();
+        addToEmployeeListTest();
+        employeeListTestObj.removeEmployee(0);
+        assertEquals(2, list.get(0).getEmployeeId());
     }
 
 
