@@ -26,7 +26,7 @@ public class EmployeeList {
     }
 
     public void yearlyPayRaise(double percentage) {
-        if(percentage > 0) {
+        if(percentage > 0 && percentage <= 100) {
             for (int i = 0; i < list.size(); i++) {
                 double newSalary = list.get(i).getSalary();
                 newSalary = (newSalary / 100.0) * percentage + newSalary;

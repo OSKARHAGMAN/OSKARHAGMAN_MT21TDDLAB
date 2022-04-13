@@ -75,7 +75,7 @@ public class empTest {
         employeeListTestObj.yearlyPayRaise(-20);
         assertEquals(salaryBeforeYearlyPayraise, list.get(0).getSalary());
 
-        employeeListTestObj.yearlyPayRaise(120);
+        employeeListTestObj.yearlyPayRaise(101);
         assertEquals(salaryBeforeYearlyPayraise, list.get(0).getSalary());
 
     }
