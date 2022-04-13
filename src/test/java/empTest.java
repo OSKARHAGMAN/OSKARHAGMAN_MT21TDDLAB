@@ -88,7 +88,7 @@ public class empTest {
         addToEmployeeListTest();
 
         int index = 1;
-        
+
         double temp = list.get(index).getSalary();
         double percentRaise = 15.0;
 

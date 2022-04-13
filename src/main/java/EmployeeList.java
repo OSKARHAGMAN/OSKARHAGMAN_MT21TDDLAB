@@ -35,6 +35,8 @@ public class EmployeeList {
         }
     }
     public void individualPayRaise(int index, double percentage){
-
+        double newSalary = list.get(index).getSalary();
+        newSalary = (newSalary / 100.0) * percentage + newSalary;
+        list.get(index).setSalary(newSalary);
     }
 }
